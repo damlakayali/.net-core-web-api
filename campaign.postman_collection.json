@@ -1,0 +1,204 @@
+{
+	"info": {
+		"_postman_id": "33239275-5564-4f85-9dee-33a3bbcca5de",
+		"name": "MeTech-DamlaKayali",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4643604"
+	},
+	"item": [
+		{
+			"name": "GetProducts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{api.host}}/product/getall",
+					"host": [
+						"{{api.host}}"
+					],
+					"path": [
+						"product",
+						"getall"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddProduct",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"basket_id\":1,\r\n    \"count\":4,\r\n    \"productid\":14\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{api.host}}/Basket/AddProduct",
+					"host": [
+						"{{api.host}}"
+					],
+					"path": [
+						"Basket",
+						"AddProduct"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetBasket",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{api.host}}/Basket/GetBasket?id=1",
+					"host": [
+						"{{api.host}}"
+					],
+					"path": [
+						"Basket",
+						"GetBasket"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetCampaigns",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{api.host}}/campaign/getall",
+					"host": [
+						"{{api.host}}"
+					],
+					"path": [
+						"campaign",
+						"getall"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateBasket",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{api.host}}/basket/create",
+					"host": [
+						"{{api.host}}"
+					],
+					"path": [
+						"basket",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ChooseCampaign",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    id:\r\n    campaign_id:\r\n    coupon_code:\r\n}"
+				},
+				"url": {
+					"raw": "{{api.host}}/Basket/ChooseCampaign",
+					"host": [
+						"{{api.host}}"
+					],
+					"path": [
+						"Basket",
+						"ChooseCampaign"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteProduct",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    basket_id:1,\r\n    count:1,\r\n    product_id:1\r\n}"
+				},
+				"url": {
+					"raw": "{{api.host}}/Basket/DeleteProduct",
+					"host": [
+						"{{api.host}}"
+					],
+					"path": [
+						"Basket",
+						"DeleteProduct"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FillData",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{api.host}}/Basket/FillData",
+					"host": [
+						"{{api.host}}"
+					],
+					"path": [
+						"Basket",
+						"FillData"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "api.host",
+			"value": "https://localhost:44347/api",
+			"type": "string"
+		}
+	]
+}
