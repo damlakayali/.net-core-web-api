@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "33239275-5564-4f85-9dee-33a3bbcca5de",
-		"name": "MeTech-DamlaKayali",
+		"name": "Campaign",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "4643604"
 	},
@@ -136,20 +136,22 @@
 		{
 			"name": "DeleteProduct",
 			"request": {
-				"method": "POST",
+				"method": "GET",
 				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    basket_id:1,\r\n    count:1,\r\n    product_id:1\r\n}"
-				},
 				"url": {
-					"raw": "{{api.host}}/Basket/DeleteProduct",
+					"raw": "{{api.host}}/Basket/DeleteProduct?id=36",
 					"host": [
 						"{{api.host}}"
 					],
 					"path": [
 						"Basket",
 						"DeleteProduct"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "36"
+						}
 					]
 				}
 			},
