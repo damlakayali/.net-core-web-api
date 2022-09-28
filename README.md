@@ -12,3 +12,5 @@ Proje
 içerir.
 
 
+- Katmanlı mimari kullanılmıştır.
+
